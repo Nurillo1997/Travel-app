@@ -2,38 +2,48 @@ import React from 'react';
 import '../css/App.css';
 import { RippleBadge } from './MaterialTheme/styled';
 import { Box, Button, Container, Paper, Stack, Typography } from '@mui/material';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import About from './screens/about';
+import Users from './screens/users';
+import Home from './screens/home';
 
 function App() {
   return (
     <Container>
-      <Stack flexDirection={"column"}>
-        <Box sx={{ my: 4 }}>
-          <Typography variant='h4' component={'h1'} gutterBottom>
-            Create React app on Typescript with Redux
-          </Typography>
-        </Box>
-        <Box>
-          <RippleBadge badgeContent={4}>
-            <Button color='secondary' variant='contained'>
-              Contained
-            </Button>
-          </RippleBadge>
-          <br></br>
+      <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
 
-          <Button
-            variant='contained'
-            disableRipple
-            disableElevation
-            >
-            hello
-          </Button>
-
-         <Paper sx={{height:'200px', width: '120px'}}>
-
-         </Paper>
-
-        </Box>
-      </Stack>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
     </Container>
   );
 }
