@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/App.css';
+import '../css/navbar.css';
 import { RippleBadge } from './MaterialTheme/styled';
 import { Box, Button, Container, Paper, Stack, Typography } from '@mui/material';
 import {
@@ -18,13 +19,21 @@ import ToursPage from './screens/ToursPage';
 import OrdersPage from './screens/OrdersPage';
 import CommunityPage from './screens/CommunityPage';
 import HelpPage from './screens/HelpPage';
+import OtherPagesNavbar from './components/header/others';
+import HompePageHeader from './components/header';
 
 function App() {
+  const main_path = window.location.pathname;
+  console.log('main_path', main_path);
+
   return (
-    <Container>
       <Router>
-        <div>
-          <nav>
+        {
+          main_path == '/'
+            ? <HompePageHeader />
+            : <OtherPagesNavbar />
+        }
+        {/* <nav>
             <ul>
               <li>
                 <Link to="/">HomePage</Link>
@@ -54,40 +63,38 @@ function App() {
                 <Link to="/help-page">HelpPage</Link>
               </li>
             </ul>
-          </nav>
+          </nav> */}
 
-          <Switch>
-            <Route path="/login-page">
-              <LoginPage />
-            </Route>
-            <Route path="/signup-page">
-              <SignupPage />
-            </Route>
-            <Route path="/agents-page">
-              <AgentsPage />
-            </Route>
-            <Route path="/destinations-page">
-              <DestinationsPage />
-            </Route>
-            <Route path="/tours-page">
-              <ToursPage />
-            </Route>
-            <Route path="/orders-page">
-              <OrdersPage />
-            </Route>
-            <Route path="/community-page">
-              <CommunityPage />
-            </Route>
-            <Route path="/help-page">
-              <HelpPage />
-            </Route>
-            <Route path="/">
-              <HomePage />
-            </Route>
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/login-page">
+            <LoginPage />
+          </Route>
+          <Route path="/signup-page">
+            <SignupPage />
+          </Route>
+          <Route path="/agents-page">
+            <AgentsPage />
+          </Route>
+          <Route path="/destinations-page">
+            <DestinationsPage />
+          </Route>
+          <Route path="/tours-page">
+            <ToursPage />
+          </Route>
+          <Route path="/orders-page">
+            <OrdersPage />
+          </Route>
+          <Route path="/community-page">
+            <CommunityPage />
+          </Route>
+          <Route path="/help-page">
+            <HelpPage />
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
       </Router>
-    </Container>
   );
 }
 
