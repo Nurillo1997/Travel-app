@@ -1,4 +1,4 @@
-import { Box, Container, Stack } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import React from "react";
 
 export default function HompePageHeader() {
@@ -31,17 +31,47 @@ export default function HompePageHeader() {
               flexDirection={'row'}
               justifyContent={"space-between"}
             >
-              <Box className="topNavRightIcons">1</Box>
-              <Box className="topNavRightIcons">2</Box>
-              <Box className="topNavRightIcons">3</Box>
+              <Box className="topNavRightIcons">
+                <img src="/icons/search.png" alt="search icon" />
+              </Box>
+              <Box className="topNavRightIcons">
+                <img src="/icons/cart.png" alt="" />
+              </Box>
+              <Box className="topNavRightIcons">
+                <img src="/icons/admin.png" alt="" />
+              </Box>
             </Stack>
           </Stack>
         </Container>
       </div>
       <div className="homePageNavBackground" >
-        <div className="label">
-          <div className="travel-adventures">Travel &amp; Adventures</div>
-        </div>
+        <Container>
+
+          <Stack
+            flexDirection={'row'}
+            justifyContent={"space-between"}>
+
+            <Box className="slider">
+              <img src="/icons/slider_left.png" alt="" />
+            </Box>
+
+            <Stack
+              style={{alignItems:'center'}}
+              flexDirection={'column'}
+              justifyContent={"space-around"}
+              >
+              <Box className="clider_between_text_1">Travel & Adventures</Box>
+              <Box className="clider_between_text_2">travel</Box>
+
+            </Stack>
+
+            <Box className="slider">
+              <img src="/icons/slider_right.png" alt="" />
+            </Box>
+
+          </Stack>
+
+        </Container>
       </div>
 
     </div>
