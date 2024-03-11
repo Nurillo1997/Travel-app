@@ -3,7 +3,8 @@ import { Container } from "@mui/material"
 
 export default function HomePage() {
   return (
-    <Container>
+    <Container
+    >
       <h2>Home page</h2>
     </Container>
   );

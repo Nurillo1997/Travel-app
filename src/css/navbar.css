@@ -101,3 +101,19 @@
   font-weight: 700;
   
 }
+
+.searchBar{
+  height: 100px;
+  background-color: white;
+  margin-top: 247px;
+  border-radius: 5px;
+}
+
+.searchBarInputs{
+  width:313.5px ;
+  margin-left: 30px;
+
+}
+.searchBarButton{
+width: 226px;
+}

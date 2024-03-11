@@ -1,4 +1,4 @@
-import { Box, Container, Stack } from "@mui/material";
+import { Box, Button, Container, Input, Stack, TextField } from "@mui/material";
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
@@ -6,7 +6,6 @@ import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
 import PersonAdd from "@mui/icons-material/PersonAdd";
 import Settings from "@mui/icons-material/Settings";
@@ -23,7 +22,7 @@ export default function HompePageHeader() {
     setAnchorEl(null);
   };
   return (
-    <div>
+    <div style={{ marginBottom: "100px" }}>
       <div>
         <Container>
           <Stack
@@ -45,32 +44,32 @@ export default function HompePageHeader() {
               </Box>
               <Box className="hover_line">
                 <NavLink to="/agents-page" activeClassName="underline">
-                Agents
+                  Agents
                 </NavLink>
               </Box>
               <Box className="hover_line">
                 <NavLink to="/destinations-page" activeClassName="underline">
-                Destinations
+                  Destinations
                 </NavLink>
               </Box>
               <Box className="hover_line">
                 <NavLink to="/tours-page" activeClassName="underline">
-                Tours
+                  Tours
                 </NavLink>
               </Box>
               <Box className="hover_line">
                 <NavLink to="/orders-page" activeClassName="underline">
-                Orders
+                  Orders
                 </NavLink>
               </Box>
               <Box className="hover_line">
                 <NavLink to="/community-page" activeClassName="underline">
-                Community
+                  Community
                 </NavLink>
               </Box>
               <Box className="hover_line">
                 <NavLink to="/help-page" activeClassName="underline">
-                Help
+                  Help
                 </NavLink>
               </Box>
             </Stack>
@@ -89,7 +88,7 @@ export default function HompePageHeader() {
                 </Box>
                 <Tooltip title="Account settings">
                   <IconButton
-                  className="topNavRightIcons"
+                    className="topNavRightIcons"
                     onClick={handleClick}
                     size="small"
                     sx={{ ml: 2 }}
@@ -171,7 +170,6 @@ export default function HompePageHeader() {
       </div>
       <div className="homePageNavBackground" >
         <Container>
-
           <Stack
             flexDirection={'row'}
             justifyContent={"space-between"}>
@@ -193,7 +191,50 @@ export default function HompePageHeader() {
             <Box className="slider">
               <img src="/icons/slider_right.png" alt="" />
             </Box>
+          </Stack>
+          <Stack
+            className="searchBar"
+            display={'flex'}
+            flexDirection={'row'}
+            justifyContent={'space-between'}
+          >
 
+            <Stack
+              className="searchBarInputs"
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Box> hello world12</Box>
+              <input type="text" 
+              style={{}}
+              />
+            </Stack>
+            <Divider orientation="vertical" variant="middle" flexItem ></Divider>
+            <Stack
+              className="searchBarInputs"
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Box> hello world12</Box>
+              <Box> hello world12</Box>
+            </Stack>
+            <Divider orientation="vertical" variant="middle" flexItem ></Divider>
+            <Stack
+              className="searchBarInputs"
+              display={'flex'}
+              flexDirection={'column'}
+            >
+              <Box> hello world12</Box>
+              <Box> hello world12</Box>
+            </Stack>
+
+            <Button
+              variant="contained"
+              className="searchBarButton"
+              style={{ backgroundColor: '#E8604C' }}
+            >
+              Find
+            </Button>
           </Stack>
 
         </Container>
