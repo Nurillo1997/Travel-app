@@ -13,16 +13,24 @@ import Logout from "@mui/icons-material/Logout";
 import { NavLink } from "react-router-dom";
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-// import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import StyledSelector from "../others/StyledSelector";
 
-
-// import dayjs from 'dayjs';
-
-// const today = dayjs();
 
 export default function HompePageHeader() {
+  //for react slick
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -238,7 +246,7 @@ export default function HompePageHeader() {
                 value='today'
                 name="place"
                 id="place" /> */}
-                <DatePicker className="searchBarInputs"  selected={startDate} onChange={(date) => {
+                <DatePicker className="searchBarInputs" selected={startDate} onChange={(date) => {
                   if (date) {
                     setStartDate(date);
                   }
@@ -252,12 +260,7 @@ export default function HompePageHeader() {
               flexDirection={'column'}
             >
               <Box className='inputTitle'>Type</Box>
-              <input
-                className="searchBarInputs"
-                type="text"
-                placeholder="Adventure"
-                name="place"
-                id="place" />
+              <StyledSelector/>
             </Stack>
 
             <Button
@@ -265,12 +268,35 @@ export default function HompePageHeader() {
               className="searchBarButton"
               style={{ backgroundColor: '#E8604C' }}
             >
-              Find
+              find now
             </Button>
           </Stack>
+          <Slider {...settings}>
+            <div>
+              <h3>1</h3>
+            </div>
+            <div>
+              <h3>2</h3>
+            </div>
+            <div>
+              <img className="slickImg"
+               src="/homePage/HomePageNav.jpg" alt="" />
+            </div>
+            <div>
+            <img className="slickImg"
+               src="/homePage/HomePageNav.jpg" alt="" />
+            </div>
+            <div>
+              <h3>5</h3>
+            </div>
+            <div>
+              <h3>6</h3>
+            </div>
+          </Slider>
+
+
         </Container>
       </div>
     </div>
-
   );
 }
