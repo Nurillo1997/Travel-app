@@ -1,5 +1,5 @@
 import { Box, Button, Container, Input, Stack, TextField } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -11,6 +11,16 @@ import PersonAdd from "@mui/icons-material/PersonAdd";
 import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
 import { NavLink } from "react-router-dom";
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+// import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+
+// import dayjs from 'dayjs';
+
+// const today = dayjs();
 
 export default function HompePageHeader() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -21,6 +31,9 @@ export default function HompePageHeader() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  // react datePicker
+  const [startDate, setStartDate] = useState(new Date());
+
   return (
     <div style={{ marginBottom: "100px" }}>
       <div>
@@ -198,34 +211,53 @@ export default function HompePageHeader() {
             flexDirection={'row'}
             justifyContent={'space-between'}
           >
-
             <Stack
-              className="searchBarInputs"
+              className="searchBarInputsBlock"
               display={'flex'}
               flexDirection={'column'}
             >
-              <Box> hello world12</Box>
-              <input type="text" 
-              style={{}}
-              />
+              <Box className='inputTitle'>Where</Box>
+              <input
+                className="searchBarInputs"
+                type="text"
+                placeholder="Enter keywords"
+                name="place"
+                id="place" />
             </Stack>
-            <Divider orientation="vertical" variant="middle" flexItem ></Divider>
+            <Divider orientation="vertical" flexItem ></Divider>
             <Stack
-              className="searchBarInputs"
+              className="searchBarInputsBlock"
               display={'flex'}
               flexDirection={'column'}
             >
-              <Box> hello world12</Box>
-              <Box> hello world12</Box>
+              <Box className='inputTitle'>When</Box>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                {/* <input
+                className="searchBarInputs"
+                type="date"
+                value='today'
+                name="place"
+                id="place" /> */}
+                <DatePicker className="searchBarInputs"  selected={startDate} onChange={(date) => {
+                  if (date) {
+                    setStartDate(date);
+                  }
+                }} />
+              </LocalizationProvider>
             </Stack>
-            <Divider orientation="vertical" variant="middle" flexItem ></Divider>
+            <Divider orientation="vertical" flexItem ></Divider>
             <Stack
-              className="searchBarInputs"
+              className="searchBarInputsBlock"
               display={'flex'}
               flexDirection={'column'}
             >
-              <Box> hello world12</Box>
-              <Box> hello world12</Box>
+              <Box className='inputTitle'>Type</Box>
+              <input
+                className="searchBarInputs"
+                type="text"
+                placeholder="Adventure"
+                name="place"
+                id="place" />
             </Stack>
 
             <Button
@@ -236,10 +268,8 @@ export default function HompePageHeader() {
               Find
             </Button>
           </Stack>
-
         </Container>
       </div>
-
     </div>
 
   );
