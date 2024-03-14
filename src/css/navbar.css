@@ -145,8 +145,6 @@
   text-transform: uppercase;
 }
 
-.css-1e3kzd4-MuiButtonBase-root-MuiButton-root {}
-
 .searchBarInputs::placeholder {
   color: black;
 }
@@ -286,6 +284,7 @@
 
 .slick-slider {
   margin-top: 200px;
+  margin-bottom: 200px;
   /* background-image:url('/public/homePage/HomePageNav.jpg'); */
   text-align: center;
   position: relative;

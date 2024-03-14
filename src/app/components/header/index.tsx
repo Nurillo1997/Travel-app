@@ -19,6 +19,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import StyledSelector from "../others/StyledSelector";
+import GridPapper from "../others/GridPapper";
 
 
 export default function HompePageHeader() {
@@ -260,7 +261,7 @@ export default function HompePageHeader() {
               flexDirection={'column'}
             >
               <Box className='inputTitle'>Type</Box>
-              <StyledSelector/>
+              <StyledSelector />
             </Stack>
 
             <Button
@@ -280,11 +281,11 @@ export default function HompePageHeader() {
             </div>
             <div>
               <img className="slickImg"
-               src="/homePage/HomePageNav.jpg" alt="" />
+                src="/homePage/HomePageNav.jpg" alt="" />
             </div>
             <div>
-            <img className="slickImg"
-               src="/homePage/HomePageNav.jpg" alt="" />
+              <img className="slickImg"
+                src="/homePage/HomePageNav.jpg" alt="" />
             </div>
             <div>
               <h3>5</h3>
@@ -294,7 +295,8 @@ export default function HompePageHeader() {
             </div>
           </Slider>
 
-
+          {/* for external design */}
+          <GridPapper />
         </Container>
       </div>
     </div>
