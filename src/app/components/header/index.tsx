@@ -1,4 +1,4 @@
-import { Box, Button, Container, Input, Stack, TextField } from "@mui/material";
+import { Badge, Box, Button, Container, Icon, Input, Stack, TextField } from "@mui/material";
 import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
@@ -20,6 +20,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import StyledSelector from "../others/StyledSelector";
 import GridPapper from "../others/GridPapper";
+import { CartBadge, RippleBadge } from "../../MaterialTheme/styled";
 
 
 export default function HompePageHeader() {
@@ -94,26 +95,43 @@ export default function HompePageHeader() {
                   Help
                 </NavLink>
               </Box>
+
             </Stack>
 
             <React.Fragment>
+              
               <Stack
                 className="topNavRightCont"
                 flexDirection={'row'}
                 justifyContent={"space-between"}
               >
-                <Box className="topNavRightIcons">
-                  <img src="/icons/search.png" alt="search icon" />
+                {/* TODO: chap tomonga extand qildirish */}
+            <Box className="topNavRightIcons1">
+                  <form action="" className="animeSearch">
+                    <input className="animeSearchInput" type="search" placeholder="Search here ..."/>
+                      <i className="fa fa-search"></i>
+                  </form>
+                  {/* <img src="/icons/search.png" alt="search icon" /> */}
                 </Box>
+
                 <Box className="topNavRightIcons">
-                  <img src="/icons/cart.png" alt="" />
+                  <IconButton
+                    aria-label="cart"
+                    id="basic-button"
+                    aria-controls={undefined}
+                    aria-haspopup='true'
+                    aria-expanded={undefined}
+                  >
+                    <CartBadge badgeContent={3}>
+                      <img src="/icons/cart.png" />
+                    </CartBadge>
+                  </IconButton>
                 </Box>
                 <Tooltip title="Account settings">
                   <IconButton
                     className="topNavRightIcons"
                     onClick={handleClick}
                     size="small"
-                    sx={{ ml: 2 }}
                     aria-controls={open ? "account-menu" : undefined}
                     aria-haspopup="true"
                     aria-expanded={open ? "true" : undefined}

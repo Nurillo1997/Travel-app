@@ -31,3 +31,11 @@ export const RippleBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
+export const CartBadge = styled(Badge)(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    backgroundColor: "#E8604C",
+    color: "#FFFF",
+    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+  },
+}));
+
