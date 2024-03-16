@@ -208,7 +208,10 @@ export default function HompePageHeader() {
           </Stack>
         </Container>
       </div>
+      
+    <div className="homePageNavBackgroundLayer">
       <div className="homePageNavBackground" >
+      <div className="homePageNavBackgroundFade">
         <Container>
           <Stack
             flexDirection={'row'}
@@ -316,6 +319,8 @@ export default function HompePageHeader() {
           {/* for external design */}
           {/* <GridPapper /> */}
         </Container>
+      </div>
+      </div>
       </div>
     </div>
   );
