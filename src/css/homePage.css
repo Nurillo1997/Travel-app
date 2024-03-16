@@ -1,37 +1,41 @@
-
-.HomePageFirstSecBackground{
+.HomePageFirstSecBackground {
   width: 100%;
   height: 551px;
   display: flex;
   background: url("/public/homePage/firstSectionBackground.svg");
 }
-.HomeFirstSecTitle_1{
+
+.HomeFirstSecTitle_1 {
   margin-top: 40px;
-color: #E8604C;
-text-align: center;
-font-family: Satisfy;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  color: #E8604C;
+  text-align: center;
+  font-family: Satisfy;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.HomeFirstSecTitle_2{
+
+.HomeFirstSecTitle_2 {
   margin-top: 20px;
   color: #000;
-text-align: center;
-font-family: "DM Sans";
-font-size: 50px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-.next_btn, .prev_btn {
+
+.next_btn,
+.prev_btn {
   align-items: center;
   display: flex;
   height: 147px;
   justify-content: center;
   width: 10%;
 }
+
 .agency_avatars_wrapper {
   align-items: center;
   display: flex;
@@ -64,13 +68,13 @@ line-height: normal;
   flex-direction: row;
   justify-content: space-between;
 }
-.agency_avatars span {
-    color: #fffcfc;
-    font-family: Solway;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 14px;
-    margin-top: 14px;
-}
 
+.agency_avatars span {
+  color: #211e1e;
+  font-family: Solway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: 14px;
+}

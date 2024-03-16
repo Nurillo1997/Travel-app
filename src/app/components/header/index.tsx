@@ -99,17 +99,17 @@ export default function HompePageHeader() {
             </Stack>
 
             <React.Fragment>
-              
+
               <Stack
                 className="topNavRightCont"
                 flexDirection={'row'}
                 justifyContent={"space-between"}
               >
                 {/* TODO: chap tomonga extand qildirish */}
-            <Box className="topNavRightIcons1">
+                <Box className="topNavRightIcons1">
                   <form action="" className="animeSearch">
-                    <input className="animeSearchInput" type="search" placeholder="Search here ..."/>
-                      <i className="fa fa-search"></i>
+                    <input className="animeSearchInput" type="search" placeholder="Search here ..." />
+                    <i className="fa fa-search"></i>
                   </form>
                   {/* <img src="/icons/search.png" alt="search icon" /> */}
                 </Box>
@@ -208,119 +208,94 @@ export default function HompePageHeader() {
           </Stack>
         </Container>
       </div>
-      
-    <div className="homePageNavBackgroundLayer">
-      <div className="homePageNavBackground" >
-      <div className="homePageNavBackgroundFade">
-        <Container>
-          <Stack
-            flexDirection={'row'}
-            justifyContent={"space-between"}>
 
-            <Box className="slider">
-              <img src="/icons/slider_left.png" alt="" />
-            </Box>
+      <div className="homePageNavBackgroundLayer">
+        <div className="homePageNavBackground" >
+          <div className="homePageNavBackgroundFade">
+            <Container>
+              <Stack
+                flexDirection={'row'}
+                justifyContent={"space-between"}>
 
-            <Stack
-              style={{ alignItems: 'center' }}
-              flexDirection={'column'}
-              justifyContent={"space-around"}
-            >
-              <Box className="clider_between_text_1">Travel & Adventures</Box>
-              <Box className="clider_between_text_2">Where Would You Like To Go?</Box>
+                <Box className="slider">
+                  <img src="/icons/slider_left.png" alt="" />
+                </Box>
 
-            </Stack>
+                <Stack
+                  style={{ alignItems: 'center' }}
+                  flexDirection={'column'}
+                  justifyContent={"space-around"}
+                >
+                  <Box className="clider_between_text_1">Travel & Adventures</Box>
+                  <Box className="clider_between_text_2">Where Would You Like To Go?</Box>
 
-            <Box className="slider">
-              <img src="/icons/slider_right.png" alt="" />
-            </Box>
-          </Stack>
-          <Stack
-            className="searchBar"
-            display={'flex'}
-            flexDirection={'row'}
-            justifyContent={'space-between'}
-          >
-            <Stack
-              className="searchBarInputsBlock"
-              display={'flex'}
-              flexDirection={'column'}
-            >
-              <Box className='inputTitle'>Where</Box>
-              <input
-                className="searchBarInputs"
-                type="text"
-                placeholder="Enter keywords"
-                name="place"
-                id="place" />
-            </Stack>
-            <Divider orientation="vertical" flexItem ></Divider>
-            <Stack
-              className="searchBarInputsBlock"
-              display={'flex'}
-              flexDirection={'column'}
-            >
-              <Box className='inputTitle'>When</Box>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                {/* <input
+                </Stack>
+
+                <Box className="slider">
+                  <img src="/icons/slider_right.png" alt="" />
+                </Box>
+              </Stack>
+              <Stack
+                className="searchBar"
+                display={'flex'}
+                flexDirection={'row'}
+                justifyContent={'space-between'}
+              >
+                <Stack
+                  className="searchBarInputsBlock"
+                  display={'flex'}
+                  flexDirection={'column'}
+                >
+                  <Box className='inputTitle'>Where</Box>
+                  <input
+                    className="searchBarInputs"
+                    type="text"
+                    placeholder="Enter keywords"
+                    name="place"
+                    id="place" />
+                </Stack>
+                <Divider orientation="vertical" flexItem ></Divider>
+                <Stack
+                  className="searchBarInputsBlock"
+                  display={'flex'}
+                  flexDirection={'column'}
+                >
+                  <Box className='inputTitle'>When</Box>
+                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    {/* <input
                 className="searchBarInputs"
                 type="date"
                 value='today'
                 name="place"
                 id="place" /> */}
-                <DatePicker className="searchBarInputs" selected={startDate} onChange={(date) => {
-                  if (date) {
-                    setStartDate(date);
-                  }
-                }} />
-              </LocalizationProvider>
-            </Stack>
-            <Divider orientation="vertical" flexItem ></Divider>
-            <Stack
-              className="searchBarInputsBlock"
-              display={'flex'}
-              flexDirection={'column'}
-            >
-              <Box className='inputTitle'>Type</Box>
-              <StyledSelector />
-            </Stack>
+                    <DatePicker className="searchBarInputs" selected={startDate} onChange={(date) => {
+                      if (date) {
+                        setStartDate(date);
+                      }
+                    }} />
+                  </LocalizationProvider>
+                </Stack>
+                <Divider orientation="vertical" flexItem ></Divider>
+                <Stack
+                  className="searchBarInputsBlock"
+                  display={'flex'}
+                  flexDirection={'column'}
+                >
+                  <Box className='inputTitle'>Type</Box>
+                  <StyledSelector />
+                </Stack>
 
-            <Button
-              variant="contained"
-              className="searchBarButton"
-              style={{ backgroundColor: '#E8604C' }}
-            >
-              find now
-            </Button>
-          </Stack>
-          {/* <Slider {...settings}>
-            <div>
-              <h3>1</h3>
-            </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <img className="slickImg"
-                src="/homePage/HomePageNav.jpg" alt="" />
-            </div>
-            <div>
-              <img className="slickImg"
-                src="/homePage/HomePageNav.jpg" alt="" />
-            </div>
-            <div>
-              <h3>5</h3>
-            </div>
-            <div>
-              <h3>6</h3>
-            </div>
-          </Slider> */}
-
-          {/* for external design */}
-          {/* <GridPapper /> */}
-        </Container>
-      </div>
-      </div>
+                <Button
+                  variant="contained"
+                  className="searchBarButton"
+                  style={{ backgroundColor: '#E8604C' }}
+                >
+                  find now
+                </Button>
+              </Stack>
+            </Container>
+          </div>
+        </div>
       </div>
     </div>
   );
