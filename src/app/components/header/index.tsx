@@ -290,7 +290,7 @@ export default function HompePageHeader() {
               find now
             </Button>
           </Stack>
-          <Slider {...settings}>
+          {/* <Slider {...settings}>
             <div>
               <h3>1</h3>
             </div>
@@ -311,10 +311,10 @@ export default function HompePageHeader() {
             <div>
               <h3>6</h3>
             </div>
-          </Slider>
+          </Slider> */}
 
           {/* for external design */}
-          <GridPapper />
+          {/* <GridPapper /> */}
         </Container>
       </div>
     </div>
