@@ -83,44 +83,52 @@ interface Destination {
   _id: number;
   mb_image: string;
   des_name: string;
+  des_type: string;
 }
 
 // Mock data for random 
 const RandomDestinations: Destination[] = [
   {
     _id: 1,
-    mb_image: '3-eiffel-tower-getty.jpg',
-    des_name: 'agency 1'
+    mb_image: 'destination1.jpeg',
+    des_name: 'Spain',
+    des_type: 'Adventure'
   },
   {
     _id: 2,
-    mb_image: 'destination-1-1.f32b89c3.png',
-    des_name: 'agency 2'
+    mb_image: 'destination2.jpeg',
+    des_name: 'Thailand',
+    des_type: 'Wild'
   },
   {
     _id: 3,
-    mb_image: 'destination-1-2.6b007ca8.png',
-    des_name: 'agency 3'
+    mb_image: 'destination3.jpeg',
+    des_name: 'Africa',
+    des_type: 'Exotic'
   },
   {
     _id: 4,
-    mb_image: 'destination-1-3.d37d50e6.png',
-    des_name: 'agency 4'
+    mb_image: 'destination4.jpeg',
+    des_name: 'Australia',
+    des_type: 'Enjoy'
   },
   {
     _id: 5,
-    mb_image: 'destination-1-4.0ba8a85a.png',
-    des_name: 'agency 5'
+    mb_image: 'destination5.jpeg',
+    des_name: 'Switserland',
+    des_type: 'Diving'
   },
   {
     _id: 6,
     mb_image: 'agency_logo1.png',
-    des_name: 'agency 6'
+    des_name: 'agency 6',
+    des_type: 'Adventure'
   },
   {
     _id: 7,
     mb_image: 'images.png',
-    des_name: 'agency 7'
+    des_name: 'agency 7',
+    des_type: 'Adventure'
   },
   // Add more restaurant data as needed
 ];
@@ -205,23 +213,24 @@ export default function HomePage() {
             <Box sx={{ flexGrow: 1 }}>
               <Grid container spacing={2}>
                 {
-                   RandomDestinations.slice(0, 5).map((ele: Destination) => {
+                  RandomDestinations.slice(0, 5).map((ele: Destination) => {
                     const image_path = `${destinationApi}/${ele.mb_image}`;
                     return (
                       <Grid item xs={ele._id === 1 || ele._id === 3 ? 3 : 6} key={ele._id}>
                         <Paper
                           className="DestinationPaper"
                           style={{
-                            backgroundImage: `url(${image_path})`, // Use image_path instead of destinationApi.imageUrl
+                            backgroundImage: `linear-gradient(rgba(65, 65, 65, 0.339), rgba(65, 65, 65, 0.339)), url(${image_path})`, // Use image_path instead of destinationApi.imageUrl
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             minHeight: '290px',
-                            // color: '#fff',
                             padding: '20px',
-                            backgroundRepeat: 'no-repeat',
+                            backgroundColor: 'rgba(255, 255, 255, 1)',
                           }}
                         >
-                          {ele.des_name} {/* Use ele.country instead of destination.country */}
+                          <div className="Overlay1"></div>
+                          <Box className='destinationType'>{ele.des_type}</Box>
+                          <Box className='destinationName'>{ele.des_name}</Box>
                         </Paper>
                       </Grid>
                     );
