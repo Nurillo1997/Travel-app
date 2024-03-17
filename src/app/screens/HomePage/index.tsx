@@ -1,9 +1,12 @@
 import React from "react";
-import { Box, Container, Stack } from "@mui/material"
+import { Box, Container, Grid, Paper, Stack, Typography } from "@mui/material"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIos'
 import ArrowForwardIosNewIcon from '@mui/icons-material/ArrowForwardIos'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+// import { shuffle } from 'lodash';
+
+// react grid
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,6 +14,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../../../css/homePage.css';
 
+/****************************
+ *      Agency MOCKDAT      *
+*****************************/
 
 // Define the agency object
 interface Agency {
@@ -46,6 +52,16 @@ const randomAgencies: Agency[] = [
     mb_image: 'travel-agency-logo,-travel-company-logo-design-template-a84d60de705a96c5fdb033b1acca7966_screen.jpg',
     mb_nick: 'agency 5'
   },
+  {
+    _id: 6,
+    mb_image: 'agency_logo1.png',
+    mb_nick: 'agency 6'
+  },
+  {
+    _id: 7,
+    mb_image: 'images.png',
+    mb_nick: 'agency 7'
+  },
   // Add more restaurant data as needed
 ];
 
@@ -55,11 +71,62 @@ const chosenAgencyHandler = (agencyId: number) => {
   console.log('Chosen Agency ID:', agencyId);
 };
 
-// Mock server API URL
-const serverApi = '/agency';
+// Mock agency server API URL 
+const agencyApi = '/agency';
 
+/****************************
+ *   DESTINATION MOCKDAT    *
+*****************************/
 
+//Mock data for Destination gallery
+interface Destination {
+  _id: number;
+  mb_image: string;
+  des_name: string;
+}
 
+// Mock data for random 
+const RandomDestinations: Destination[] = [
+  {
+    _id: 1,
+    mb_image: '3-eiffel-tower-getty.jpg',
+    des_name: 'agency 1'
+  },
+  {
+    _id: 2,
+    mb_image: 'destination-1-1.f32b89c3.png',
+    des_name: 'agency 2'
+  },
+  {
+    _id: 3,
+    mb_image: 'destination-1-2.6b007ca8.png',
+    des_name: 'agency 3'
+  },
+  {
+    _id: 4,
+    mb_image: 'destination-1-3.d37d50e6.png',
+    des_name: 'agency 4'
+  },
+  {
+    _id: 5,
+    mb_image: 'destination-1-4.0ba8a85a.png',
+    des_name: 'agency 5'
+  },
+  {
+    _id: 6,
+    mb_image: 'agency_logo1.png',
+    des_name: 'agency 6'
+  },
+  {
+    _id: 7,
+    mb_image: 'images.png',
+    des_name: 'agency 7'
+  },
+  // Add more restaurant data as needed
+];
+
+// Mock destination server API URL 
+const destinationApi = 'http://localhost:3000/destination/';
 
 
 export default function HomePage() {
@@ -71,7 +138,7 @@ export default function HomePage() {
   // console.log(prevButtonRef.current);
 
   return (
-    <div style={{ marginTop: '150px' }}>
+    <div style={{ marginTop: '200px' }}>
       <div className="HomePageFirstSecBackground">
         <Container>
           <Stack display={'flex'} >
@@ -81,7 +148,7 @@ export default function HomePage() {
             <Box className="HomeFirstSecTitle_2">Want To Know Our Tops?</Box>
             <Box className="HomeFirstSecSlick">
               <Stack
-                sx={{ width: "100%", display: 'flex', mt: '35px' }}
+                sx={{ width: "100%", display: 'flex', mt: '40px' }}
                 flexDirection={'row'}
               >
                 {/* <Box className="prev_btn agency-prev" ref={prevButtonRef}>
@@ -93,7 +160,7 @@ export default function HomePage() {
                 <Swiper
                   modules={[Navigation, Pagination, Scrollbar, A11y]}
                   className='agency_avatars_wrapper'
-                  slidesPerView={3}
+                  slidesPerView={5}
                   centeredSlides={false}
                   spaceBetween={30}
                   navigation={true}
@@ -101,7 +168,7 @@ export default function HomePage() {
                   onSlideNext={() => console.log('Next Slide')}  // Optional event listener
                 >
                   {randomAgencies.map((ele: Agency) => {
-                    const image_path = `${serverApi}/${ele.mb_image}`
+                    const image_path = `${agencyApi}/${ele.mb_image}`
                     return (
                       <SwiperSlide onClick={() => chosenAgencyHandler(ele._id)}
                         style={{
@@ -113,7 +180,7 @@ export default function HomePage() {
                         className='agency_avatars'
                       >
                         <img src={image_path} />
-                        <span>{ele.mb_nick}</span>
+                        {/* <span>{ele.mb_nick}</span> */}
                       </SwiperSlide>
                     );
                   })}
@@ -130,7 +197,41 @@ export default function HomePage() {
           </Stack>
         </Container>
       </div>
-      <h1 style={{ marginTop: '300px' }}>hello</h1>
+      <Container style={{ marginTop: '40px' }}>
+        <Stack display="flex" alignItems="center">
+          <Box className="HomeFirstSecTitle_1">Destination List</Box>
+          <Box className="HomeFirstSecTitle_2">Go to Exotic Places</Box>
+          <Stack width="100%" height="650px" paddingTop={'40px'}>
+            <Box sx={{ flexGrow: 1 }}>
+              <Grid container spacing={2}>
+                {
+                   RandomDestinations.slice(0, 5).map((ele: Destination) => {
+                    const image_path = `${destinationApi}/${ele.mb_image}`;
+                    return (
+                      <Grid item xs={ele._id === 1 || ele._id === 3 ? 3 : 6} key={ele._id}>
+                        <Paper
+                          className="DestinationPaper"
+                          style={{
+                            backgroundImage: `url(${image_path})`, // Use image_path instead of destinationApi.imageUrl
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            minHeight: '290px',
+                            // color: '#fff',
+                            padding: '20px',
+                            backgroundRepeat: 'no-repeat',
+                          }}
+                        >
+                          {ele.des_name} {/* Use ele.country instead of destination.country */}
+                        </Paper>
+                      </Grid>
+                    );
+                  })
+                }
+              </Grid>
+            </Box>
+          </Stack>
+        </Stack>
+      </Container>
     </div>
   );
 }
