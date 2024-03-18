@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, Container, Grid, Paper, Stack, Typography } from "@mui/material"
+import React, { useState } from "react";
+import { Box, Button, Container, Grid, Paper, Stack, Typography } from "@mui/material"
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIos'
 import ArrowForwardIosNewIcon from '@mui/icons-material/ArrowForwardIos'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -139,6 +139,24 @@ const destinationApi = 'http://localhost:3000/destination/';
 
 export default function HomePage() {
 
+  //hover Destination 
+
+  const [hoveredMap, setHoveredMap] = useState<Record<number, boolean>>({});
+
+  const handleMouseEnter = (id: number) => {
+    setHoveredMap(prevMap => ({
+      ...prevMap,
+      [id]: true
+    }));
+  };
+
+  const handleMouseLeave = (id: number) => {
+    setHoveredMap(prevMap => ({
+      ...prevMap,
+      [id]: false
+    }));
+  };
+
   //Refs for the navigation buttons:
   const prevButtonRef = React.useRef(null);
   const nextButtonRef = React.useRef(null);
@@ -212,30 +230,38 @@ export default function HomePage() {
           <Stack width="100%" height="650px" paddingTop={'40px'}>
             <Box sx={{ flexGrow: 1 }}>
               <Grid container spacing={2}>
-                {
-                  RandomDestinations.slice(0, 5).map((ele: Destination) => {
-                    const image_path = `${destinationApi}/${ele.mb_image}`;
-                    return (
-                      <Grid item xs={ele._id === 1 || ele._id === 3 ? 3 : 6} key={ele._id}>
-                        <Paper
-                          className="DestinationPaper"
+                {RandomDestinations.slice(0, 5).map(ele => (
+                  <Grid item xs={ele._id === 1 || ele._id === 3 ? 3 : 6} key={ele._id}>
+                    <Paper
+                      className="DestinationPaper"
+                      style={{
+                        position: 'relative',
+                        backgroundImage: `linear-gradient(${hoveredMap[ele._id] ? 'rgba(0, 0, 0, 0.6)' : 'rgba(46, 46, 46, 0.398)'}, ${hoveredMap[ele._id] ? 'rgba(0, 0, 0, 0.6)' : 'rgba(46, 46, 46, 0.398)'}), url(${destinationApi}/${ele.mb_image})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        minHeight: '290px',
+                        padding: '20px',
+                        backgroundRepeat: 'no-repeat',
+                        cursor: 'pointer'
+                      }}
+                      onMouseEnter={() => handleMouseEnter(ele._id)}
+                      onMouseLeave={() => handleMouseLeave(ele._id)}
+                    >
+                      <Stack className="destinationEleBox">
+                        <Box
+                          className="RedButton"
                           style={{
-                            backgroundImage: `linear-gradient(rgba(65, 65, 65, 0.339), rgba(65, 65, 65, 0.339)), url(${image_path})`, // Use image_path instead of destinationApi.imageUrl
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            minHeight: '290px',
-                            padding: '20px',
-                            backgroundColor: 'rgba(255, 255, 255, 1)',
+                            visibility: hoveredMap[ele._id] ? 'visible' : 'hidden'
                           }}
                         >
-                          <div className="Overlay1"></div>
-                          <Box className='destinationType'>{ele.des_type}</Box>
-                          <Box className='destinationName'>{ele.des_name}</Box>
-                        </Paper>
-                      </Grid>
-                    );
-                  })
-                }
+                          <Box className="RedButtonEle">6 Tours</Box>
+                        </Box>
+                        <Box className="destinationType">{ele.des_type}</Box>
+                        <Box className="destinationName">{ele.des_name}</Box>
+                      </Stack>
+                    </Paper>
+                  </Grid>
+                ))}
               </Grid>
             </Box>
           </Stack>
