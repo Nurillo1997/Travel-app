@@ -19,39 +19,29 @@
   margin-top: 15px;
   color: #000;
   text-align: center;
-  /* font-family: "DM Sans"; */
   font-size: 50px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 
-
 /* Swiper Style */
 
-/* .next_btn,
+.next_btn,
 .prev_btn {
+  margin-top: 85px;
   align-items: center;
   display: flex;
-  height: 147px;
+  height: 50px;
   justify-content: center;
-  width: 10%;
-} */
+  cursor: pointer;
+}
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
-  border: solid;
-  padding: 5px 15px;
-  border-radius: 50%;
-  color: #E8604C;
+  color: #4f547b;
 }
 
-.swiper-button-prev:after {
-  margin-left: 20px;
-}
-
-.swiper-button-next:after {
-  margin-right: 20px;
-}
 
 .swiper {
   padding-top: 20px;
@@ -63,8 +53,7 @@
   flex-direction: row;
   height: 200px;
   overflow: hidden;
-  padding-inline-end: 60px;
-  padding-inline-start: 60px;
+  width: 1100px;
 }
 
 
@@ -102,7 +91,7 @@
 } */
 
 /* Destination */
-.destinationEleBox{
+.destinationEleBox {
   display: flex;
 }
 
@@ -127,8 +116,9 @@
   line-height: normal;
   margin-left: 30px;
 }
-.RedButton{
-  display: flex; 
+
+.RedButton {
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ff2200;
@@ -136,9 +126,10 @@
   height: 31px;
   border-radius: 5px;
   margin-left: 30px;
-  
+
 }
-.RedButtonEle{
+
+.RedButtonEle {
   color: #FFF;
   text-align: center;
   /* font-family: Poppins; */
@@ -148,4 +139,226 @@
   line-height: normal;
 }
 
+.HomePopularToursContainter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 60px;
+}
 
+/* Popular tours */
+
+.popularTourCardPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  /* font-family: Poppins; */
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 910;
+  line-height: normal;
+}
+
+.css-14vy9jj-JoyCard-root {
+  background-color: #FFF;
+  border: none;
+  --Card-padding: 30px;
+  box-shadow: 0px 5px 5px -3px rgb(228 228 228 / 20%), 0px 8px 10px 1px rgb(235 235 235 / 14%), 0px 3px 14px 2px rgb(110 110 110 / 12%);
+}
+
+.css-167p6rv-MuiStack-root {
+  height: 645px;
+}
+
+/* Events */
+
+.events_frame {
+  margin-top: 45px;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  overflow: hidden;
+}
+
+.events_main {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.events_main .events_text {
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev_next_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.events_main .prev_next_frame {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 24px;
+  margin-top: 30px;
+}
+
+.dot_frame_pagination {
+  position: relative;
+  width: auto;
+  display: flex;
+}
+
+.events_main .events_info {
+  margin-top: 75px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.events_info .events_info_frame {
+  position: relative;
+  width: 579px;
+  height: 447px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.events_img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.events_desc {
+  position: absolute;
+  padding: 10px;
+  display: flex;
+  width: 90%;
+  height: auto;
+  bottom: 5px;
+  background: white;
+  box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
+  border-radius: 8px;
+}
+
+.events_desc .events_bott {
+  width: 97%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.events_desc .events_bott .bott_left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bott_left .event_title_speaker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.event_title_speaker .event_organizator {
+  display: flex;
+  align-items: center;
+}
+
+.event_organizator .spec_text_author {
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  line-height: 34px;
+  color: #140324;
+}
+
+.bott_left .text_desc {
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+  color: #4f547b;
+}
+
+.bott_left .bott_info {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 100%;
+  height: 16px;
+}
+
+.bott_info .bott_info_main {
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: auto;
+  height: 100%;
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f547b;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-pagination-bullet {
+  width: 0;
+  margin-left: 20px;
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  opacity: 1;
+  background: #29292a;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgba(245, 76, 3, 0.773);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 8px);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
