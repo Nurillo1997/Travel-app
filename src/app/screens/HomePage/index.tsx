@@ -9,6 +9,7 @@ import TopAgencies from "./topAgencies";
 import RecommendedDestinations from "./recommendedDestinations";
 import PopularTours from "./popularTours";
 import Reviews from "./reviews";
+import BenefitsSection from "./ourBenefits";
 
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
       <RecommendedDestinations/>
       <PopularTours/>
       {/* <Reviews/> */}
+      <BenefitsSection/>
     </div>
   );
 }

@@ -37,8 +37,20 @@
   cursor: pointer;
 }
 
-.swiper-button-prev:after,
-.swiper-button-next:after {
+.topAgencyPagination {
+  width: 20px;
+  height: 20px;
+  margin-top: 30px;
+  /* background-color: #ff2200; */
+}
+
+.topAgencyPaginationContainer {
+  /* background-color: #ff2200; */
+  align-items: center;
+}
+
+.agency-prev:after,
+.agency-next:after {
   color: #4f547b;
 }
 
@@ -104,7 +116,6 @@
   font-weight: 400;
   line-height: normal;
   margin-left: 30px;
-
 }
 
 .destinationName {
@@ -126,7 +137,6 @@
   height: 31px;
   border-radius: 5px;
   margin-left: 30px;
-
 }
 
 .RedButtonEle {
@@ -218,6 +228,7 @@
   position: relative;
   width: auto;
   display: flex;
+  /* background-color: #ff2200; */
 }
 
 .events_main .events_info {
@@ -361,4 +372,210 @@
   width: auto;
   display: flex;
   align-items: center;
+}
+
+/* Our Benefits */
+
+.whyChoose {
+  position: relative;
+  display: block;
+  margin-top: 140px;
+}
+
+.whyChooseContainer {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.whyChooseLeft {
+  position: relative;
+  display: block;
+  float: left;
+  width: 47%;
+}
+
+.whyChooseBg {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  min-height: 764px;
+  background-image: url('/public/homePage/why-choose-left-bg.ef1bd558.jpg');
+}
+
+.whyChooseToggle {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  height: 171px;
+  width: 171px;
+  background-color: #e8604c;
+  box-shadow: 0 20px 20px 0 rgba(21, 29, 42, .1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  -webkit-animation: fa-spin 5s ease infinite;
+  animation: fa-spin 5s ease infinite;
+  z-index: 1;
+}
+
+.whyChooseToggle:before {
+  position: absolute;
+  height: 11px;
+  width: 25px;
+  right: 32px;
+  bottom: 0;
+  content: "";
+  background-image: url('/public/homePage/why-choo-toggle-shape.1f24a0c5.png');
+  background-repeat: no-repeat;
+  transform: rotate(-27deg);
+  z-index: -1;
+}
+
+.whyChooseToggle p {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+  line-height: 39px;
+  text-align: center;
+  /* font-family: var(--thm-reey-font); */
+  position: relative;
+
+}
+
+.whyChooseRight {
+  position: relative;
+  display: block;
+  float: right;
+  width: 53%;
+  background-color: #313041;
+  padding: 123px 0 108px 120px;
+}
+
+.whyChooseRight:before {
+  position: absolute;
+  top: 120px;
+  bottom: 120px;
+  background-color: #e8604c;
+  width: 12px;
+  left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  content: "";
+}
+
+.whyChooseRightMap {
+  position: absolute;
+  background-image: url('/public/homePage/why-choose-right-map.f0ca8326.png');
+  bottom: 0;
+  right: 0;
+  height: 500px;
+  width: 434px;
+  opacity: .1;
+}
+
+.whyChooseRightContent {
+  position: relative;
+  display: block;
+  max-width: 540px;
+  width: 100%;
+}
+
+.sectionTittle{
+  margin-bottom: 37px;
+}
+
+.sectionTitleTagline {
+  display: block;
+  color: #E8604C;
+  font-size: 20px;
+  align-items: center;
+  line-height: 30px;
+  font-weight: 400;
+  /* font-family: var(--thm-reey-font); */
+}
+.sectionTitleTittle{
+  margin: 0;
+  font-weight: 700;
+  color: white;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -.02em;
+}
+
+.whyChooseRightText{
+  font-size: 18px;
+  color: #a9a8b6;
+  margin-top: 50px;
+}
+.whyChooseList{
+  padding-left: 0;
+  list-style: none;
+}
+.whyChooseList li{
+  position: relative;
+  display: flex;
+}
+.whyChooseList li .icon{
+  position: relative;
+  top: 30px;
+  display: inline-block;
+  transition: all .5s ease;
+}
+
+.whyChooseList  li .icon span{
+  font-size: 73px;
+  color: #e8604c;
+}
+
+.iconTravel:before{
+  content: url('/public/homePage/travelPlane.png');
+}
+.iconMap:before{
+  content: url('/public/homePage/travelMap.png');
+  
+}
+[class*=" icon-"], [class^=icon-]{
+  font-family: icomoon!important;
+  /* speak: never; */
+  font-style: normal;
+  font-weight: 400;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.whyChooseList li .text{
+  margin-left: 40px;
+}
+.whyChooseList li .text h4{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 11px;
+  color: #fff;
+}
+.whyChooseList li .text p{
+  font-size: 18px;
+  color: #a9a8b6;
+  font-weight: 500;
+  margin: 0;
+}
+
+.whyChooseList li+li{
+  margin-top: 40px;
+}
+.whyChooseList li{
+  position: relative;
+  display: flex;
 }

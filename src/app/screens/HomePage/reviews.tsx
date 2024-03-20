@@ -68,7 +68,7 @@ export default function Reviews() {
                             prevEl: '.swiper-button-prev',
                         }}
                         pagination={{
-                            el: '.swiper-pagination',
+                            el: '.swiper_pagination',
                             clickable: true,
                         }}
                         autoplay={{
@@ -135,7 +135,7 @@ export default function Reviews() {
                                 src="/icons/arrow-right.svg"
                                 className='swiper-button-prev'
                                 alt="" />
-                            <div className='dot_frame_pagination swiper-pagination'></div>
+                            <div className='dot_frame_pagination swiper_pagination'></div>
                             <img
                                 src={"/icons/arrow-left.svg"}
                                 className='swiper-button-next'

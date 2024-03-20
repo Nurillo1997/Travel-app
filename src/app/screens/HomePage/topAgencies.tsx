@@ -1,11 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Pagination } from'swiper/modules';
 import { Box, Container, Stack } from "@mui/material"
 import ArrowForwardIosNewIcon from '@mui/icons-material/ArrowForwardIos'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIos'
-
-
 
 /****************************
  *      Agency MOCKDAT      *
@@ -101,9 +99,11 @@ export default function TopAgencies() {
                                     prevEl: '.agency-prev'
                                 }}
                                 pagination={{
-                                    el: '.swiper-pagination',
+                                    el: '.topAgencyPagination',
                                     clickable: true,
+                                    // dynamicBullets: true,
                                 }}
+                                modules={[Pagination]}
                             >
                                 {randomAgencies.map((ele: Agency) => {
                                     const image_path = `${agencyApi}/${ele.mb_image}`
@@ -131,6 +131,9 @@ export default function TopAgencies() {
                             </Box>
                         </Stack>
                     </Box>
+                </Stack>
+                <Stack className='topAgencyPaginationContainer' display={'flex'} width={"100%"} height={'20px'} alignItems={'center'}>
+                    <div className='topAgencyPagination'></div>
                 </Stack>
             </Container>
         </div>

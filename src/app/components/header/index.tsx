@@ -1,4 +1,4 @@
-import { Badge, Box, Button, Container, Icon, Input, Stack, TextField } from "@mui/material";
+import { Box, Button, Container, Stack } from "@mui/material";
 import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
@@ -21,6 +21,29 @@ import Slider from "react-slick";
 import StyledSelector from "../others/StyledSelector";
 import GridPapper from "../others/GridPapper";
 import { CartBadge, RippleBadge } from "../../MaterialTheme/styled";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+
+
+SwiperCore.use([Autoplay, Navigation, Pagination]);
+
+/****************************
+ *   DESTINATION MOCKDATA   *
+*****************************/
+
+const headerImages = [
+  {
+    img: "http://localhost:3000/destination/destination2.jpeg",
+  },
+  {
+    img: "http://localhost:3000/destination/destination2.jpeg",
+  },
+  {
+    img: "http://localhost:3000/destination/destination2.jpeg",
+  },
+]
 
 
 export default function HompePageHeader() {
