@@ -12,7 +12,7 @@ import Reviews from "./reviews";
 import BenefitsSection from "./ourBenefits";
 
 
-export default function HomePage() {
+export default function HomePage(props: any) {
   return (
     <div className="homePage">
       <TopAgencies/>

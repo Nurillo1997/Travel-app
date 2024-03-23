@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/App.css';
 import '../css/navbar.css';
 import { RippleBadge } from './MaterialTheme/styled';
@@ -23,6 +23,7 @@ import OtherPagesNavbar from './components/header/others';
 import HompePageHeader from './components/header';
 
 function App() {
+  const [path, setPath] = useState();
   const main_path = window.location.pathname;
   console.log('main_path', main_path);
 
@@ -30,40 +31,9 @@ function App() {
       <Router>
         {
           main_path == '/'
-            ? <HompePageHeader />
-            : <OtherPagesNavbar />
+            ? <HompePageHeader setPath={setPath} />
+            : <OtherPagesNavbar setPath={setPath} />
         }
-        {/* <nav>
-            <ul>
-              <li>
-                <Link to="/">HomePage</Link>
-              </li>
-              <li>
-                <Link to="/login-page">LoginPage</Link>
-              </li>
-              <li>
-                <Link to="/signup-page">SignupPage</Link>
-              </li>
-              <li>
-                <Link to="/agents-page">AgentsPage</Link>
-              </li>
-              <li>
-                <Link to="/destinations-page">DestinationsPage</Link>
-              </li>
-              <li>
-                <Link to="/tours-page">ToursPage</Link>
-              </li>
-              <li>
-                <Link to="/orders-page">OrdersPage</Link>
-              </li>
-              <li>
-                <Link to="/community-page">CommunityPage</Link>
-              </li>
-              <li>
-                <Link to="/help-page">HelpPage</Link>
-              </li>
-            </ul>
-          </nav> */}
 
         <Switch>
           <Route path="/login-page">

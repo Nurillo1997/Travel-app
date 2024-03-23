@@ -46,7 +46,7 @@ const headerImages = [
 ]
 
 
-export default function HompePageHeader() {
+export default function HompePageHeader(props: any) {
   //for react slick
   var settings = {
     dots: true,
@@ -83,42 +83,41 @@ export default function HompePageHeader() {
               flexDirection={'row'}
               justifyContent={"space-between"}
             >
-              <Box className="hover_line">
+              <Box className="hover_line" onClick={props.setPath}>
                 <NavLink to="/" activeClassName="underline">
                   Home
                 </NavLink>
               </Box>
-              <Box className="hover_line">
+              <Box className="hover_line" onClick={props.setPath}>
                 <NavLink to="/agents-page" activeClassName="underline">
                   Agents
                 </NavLink>
               </Box>
-              <Box className="hover_line">
+              <Box className="hover_line" onClick={props.setPath}>
                 <NavLink to="/destinations-page" activeClassName="underline">
                   Destinations
                 </NavLink>
               </Box>
-              <Box className="hover_line">
+              <Box className="hover_line" onClick={props.setPath}>
                 <NavLink to="/tours-page" activeClassName="underline">
                   Tours
                 </NavLink>
               </Box>
-              <Box className="hover_line">
+              <Box className="hover_line" onClick={props.setPath}>
                 <NavLink to="/orders-page" activeClassName="underline">
                   Orders
                 </NavLink>
               </Box>
-              <Box className="hover_line">
+              <Box className="hover_line" onClick={props.setPath}>
                 <NavLink to="/community-page" activeClassName="underline">
                   Community
                 </NavLink>
               </Box>
-              <Box className="hover_line">
+              <Box className="hover_line" onClick={props.setPath}>
                 <NavLink to="/help-page" activeClassName="underline">
                   Help
                 </NavLink>
               </Box>
-
             </Stack>
 
             <React.Fragment>
