@@ -8,7 +8,7 @@ import '../../../css/homePage.css';
 import TopAgencies from "./topAgencies";
 import RecommendedDestinations from "./recommendedDestinations";
 import PopularTours from "./popularTours";
-import Reviews from "./reviews";
+import Reviews from "./review";
 import BenefitsSection from "./ourBenefits";
 
 
@@ -20,6 +20,7 @@ export default function HomePage(props: any) {
       <PopularTours/>
       {/* <Reviews/> */}
       <BenefitsSection/>
+      <Reviews/>
     </div>
   );
 }
