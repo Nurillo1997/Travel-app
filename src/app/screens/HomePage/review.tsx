@@ -60,10 +60,11 @@ export default function Reviews() {
   //rating value
   const values = 4.5;
   return (
-    <Container className="reviews">
+    <div className='reviews'>
+    <Container className="reviewsContainer">
       <Stack marginRight={'30px'} display={'flex'} flexDirection={'column'}>
-        <Box className="HomeFirstSecTitle_1">Top Agents</Box>
-        <Box className="HomeFirstSecTitle_2">Want To Know Our Tops?</Box>
+        <Box className="HomeFirstSecTitle_1">Testimonials & Reviews</Box>
+        <Box className="HomeFirstSecTitle_2">What They’re Saying</Box>
         <Swiper
           className='events_info swiper-wrapper'
           slidesPerView={3}
@@ -134,5 +135,9 @@ export default function Reviews() {
         <div className='reviewsPagination'></div>
       </Stack>
     </Container>
+    <div className='reviewBackground'>
+      <img className='reviewBackgroundImg' src="/homePage/gallery-map 1.png" alt="" />
+    </div>
+    </div>
   )
 }

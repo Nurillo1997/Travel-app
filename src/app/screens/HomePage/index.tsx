@@ -10,6 +10,7 @@ import RecommendedDestinations from "./recommendedDestinations";
 import PopularTours from "./popularTours";
 import Reviews from "./review";
 import BenefitsSection from "./ourBenefits";
+import Articles from "./articles";
 
 
 export default function HomePage(props: any) {
@@ -21,6 +22,7 @@ export default function HomePage(props: any) {
       {/* <Reviews/> */}
       <BenefitsSection/>
       <Reviews/>
+      <Articles/>
     </div>
   );
 }
