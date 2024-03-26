@@ -18,8 +18,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import StyledSelector from "../others/StyledSelector";
-import GridPapper from "../others/GridPapper";
+import StyledSelector from "../../MaterialTheme/others/StyledSelector";
+import GridPapper from "../../MaterialTheme/others/GridPapper";
 import { CartBadge, RippleBadge } from "../../MaterialTheme/styled";
 
 import { Swiper, SwiperSlide } from "swiper/react";

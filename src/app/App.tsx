@@ -21,6 +21,7 @@ import CommunityPage from './screens/CommunityPage';
 import HelpPage from './screens/HelpPage';
 import OtherPagesNavbar from './components/header/others';
 import HompePageHeader from './components/header';
+import Footer from './components/footer';
 
 function App() {
   const [path, setPath] = useState();
@@ -64,6 +65,7 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
+        <Footer/>
       </Router>
   );
 }

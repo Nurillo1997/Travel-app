@@ -592,7 +592,7 @@
 
 /* reviews */
 
-.reviews{
+.reviews {
   height: 1229px;
   width: 100%;
 }
@@ -678,15 +678,15 @@
   align-items: center;
 }
 
-.reviewBackground{
+.reviewBackground {
   position: relative;
-  bottom:550px;
+  bottom: 550px;
   width: 100%;
   height: 550px;
   background-color: #FAF5EE;
 }
 
-.reviewBackgroundImg{
+.reviewBackgroundImg {
   position: relative;
   width: 100%;
   height: 100%;
@@ -708,7 +708,7 @@
   text-transform: uppercase;
 }
 
-.articleContainerLayout{
+.articleContainerLayout {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -731,7 +731,7 @@
   background-image: url('/public/destination/destination4.jpeg');
 }
 
-.articleImg .date  {
+.articleImg .date {
   position: relative;
   display: flex;
   justify-content: center;
@@ -745,7 +745,8 @@
   border-radius: 9px 0px;
 
 }
-.article .date span{
+
+.article .date span {
   color: white;
   font-size: 16px;
   text-transform: uppercase;
@@ -783,4 +784,144 @@
   font-style: normal;
   font-weight: 700;
   line-height: 40px;
+}
+
+
+/* footer */
+
+.footer {
+  position: relative;
+  height: 487px;
+  flex-shrink: 0;
+  background-color: #313041;
+}
+.footer .container{
+  display: flex;
+  flex-direction: row;
+  height: 487px;
+}
+
+.footerMap {
+  position: sticky;
+  left: 100%;
+}
+
+.firstBlock {
+  position: relative;
+  bottom: 220px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.footerIcon {
+  width: 132px;
+  height: 35px;
+}
+
+.firstBlockFirstEle {
+  display: flex;
+  height: 160px;
+  justify-content: space-between;
+}
+
+.firstBlockSecondEle {
+  display: flex;
+  height: 140px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.tell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tell img {
+  width: 20px;
+  height: 20px;
+}
+
+.tell span {
+  padding-left: 15px;
+}
+
+.footer span {
+  color: #A9A8B6;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133.333%;
+  /* 18.667px */
+}
+.secondBlock{
+  position: relative;
+  bottom: 230px;
+  margin-left: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 280px;
+}
+.secondBlock p{
+  color: #ffffff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.333%;
+}
+
+.thirdBlock{
+  position: relative;
+  bottom: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 280px;
+}
+
+.thirdBlock p{
+  color: #ffffff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.333%;
+}
+
+.forthBlock{
+  position: relative;
+  bottom: 230px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 280px;
+}
+
+.forthBlock p{
+  color: #ffffff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.333%;
+}
+
+.forthBlockEleBlock{
+  width: 230px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.forthBlockEle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #FAF5EE;;
+  cursor: pointer;
 }
