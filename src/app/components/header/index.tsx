@@ -127,14 +127,6 @@ export default function HompePageHeader(props: any) {
                 flexDirection={'row'}
                 justifyContent={"space-between"}
               >
-                {/* TODO: chap tomonga extand qildirish */}
-                <Box className="topNavRightIcons1">
-                  <form action="" className="animeSearch">
-                    <input className="animeSearchInput" type="search" placeholder="Search here ..." />
-                    <i className="fa fa-search"></i>
-                  </form>
-                  {/* <img src="/icons/search.png" alt="search icon" /> */}
-                </Box>
 
                 <Box className="topNavRightIcons">
                   <IconButton
@@ -235,14 +227,6 @@ export default function HompePageHeader(props: any) {
         <div className="homePageNavBackground" >
           <div className="homePageNavBackgroundFade">
             <Container>
-              <Stack
-                flexDirection={'row'}
-                justifyContent={"space-between"}>
-
-                <Box className="slider">
-                  <img src="/icons/slider_left.png" alt="" />
-                </Box>
-
                 <Stack
                   style={{ alignItems: 'center' }}
                   flexDirection={'column'}
@@ -250,13 +234,7 @@ export default function HompePageHeader(props: any) {
                 >
                   <Box className="clider_between_text_1">Travel & Adventures</Box>
                   <Box className="clider_between_text_2">Where Would You Like To Go?</Box>
-
                 </Stack>
-
-                <Box className="slider">
-                  <img src="/icons/slider_right.png" alt="" />
-                </Box>
-              </Stack>
               <Stack
                 className="searchBar"
                 display={'flex'}
@@ -284,12 +262,7 @@ export default function HompePageHeader(props: any) {
                 >
                   <Box className='inputTitle'>When</Box>
                   <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    {/* <input
-                className="searchBarInputs"
-                type="date"
-                value='today'
-                name="place"
-                id="place" /> */}
+
                     <DatePicker className="searchBarInputs" selected={startDate} onChange={(date) => {
                       if (date) {
                         setStartDate(date);

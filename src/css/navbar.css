@@ -46,7 +46,7 @@
 }
 
 .topNavRightCont {
-  width: 200px;
+  width: 140px;
 }
 
 .topNavRightIcons {
@@ -167,6 +167,44 @@ form.animeSearch:hover .fa {
   background: rgba(49 48 65 / 60%);
 }
 
+/* other pagesHeader start */
+
+.otherPageNavBackgroundLayer {
+  width: 100%;
+  height: 393px;
+}
+
+.otherPageNavBackground {
+  width: 100%;
+  height: 475px;
+  display: flex;
+  background: url("/public/homePage/otherPages.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.otherPageNavBackgroundFade {
+  position: absolute;
+  height: 475px;
+  width: 100%;
+  content: "";
+  background: rgba(65, 65, 71, 0.4);
+}
+
+.otherPagesHeaderText {
+  z-index: 2;
+  width: max-content;
+  color: #FFF;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 23%;
+}
+
+/* other pagesHeader end */
+
+
 .label .travel-adventures {
   color: #e8604c;
   font-family: "Oregano-Regular", Helvetica;
@@ -259,7 +297,7 @@ form.animeSearch:hover .fa {
 }
 
 /* date pickers style */
-div.react-datepicker-popper{
+div.react-datepicker-popper {
   z-index: 2;
 }
 
