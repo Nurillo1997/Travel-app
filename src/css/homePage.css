@@ -791,14 +791,18 @@
 
 .footer {
   position: relative;
-  height: 487px;
+  height: 500px;
   flex-shrink: 0;
   background-color: #313041;
+  background-image: url('/public/homePage/footerMap.png');
+  background-repeat: no-repeat;
+  background-position: right  top;
 }
 .footer .container{
+  height: fit-content;
   display: flex;
-  flex-direction: row;
-  height: 487px;
+  flex-direction: column;
+  width: 1320px;
 }
 
 .footerMap {
@@ -807,8 +811,9 @@
 }
 
 .firstBlock {
+  height: 404px;
   position: relative;
-  bottom: 220px;
+  top: 60px;
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -857,7 +862,7 @@
 }
 .secondBlock{
   position: relative;
-  bottom: 230px;
+  top: 50px;
   margin-left: 230px;
   display: flex;
   flex-direction: column;
@@ -875,7 +880,7 @@
 
 .thirdBlock{
   position: relative;
-  bottom: 230px;
+  top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -893,7 +898,7 @@
 
 .forthBlock{
   position: relative;
-  bottom: 230px;
+  top: 50px;
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -924,4 +929,22 @@
   border-radius: 50%;
   background-color: #FAF5EE;;
   cursor: pointer;
+}
+
+.footerSecondDevider{
+  position: relative;
+  top: 30px;
+  z-index: 2;
+}
+
+.copyright{
+  position: relative;
+  margin-top: 50px;
+  margin-left: 82.5%;
+  color: #DEDEDE;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133.333%; 
 }

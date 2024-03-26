@@ -3,13 +3,14 @@ import { Box, Container, Divider, Stack } from "@mui/material";
 export default function Footer() {
   return (
     <div className="footer">
-      <img className="footerMap" src="/homePage/footerMap.png" alt="" />
+      {/* <img className="footerMap" src="/homePage/footerMap.png" alt="" /> */}
       <Container className="container">
+        <Stack display={'flex'} flexDirection={'row'}>
         <Stack className="firstBlock">
           <Stack className="firstBlockFirstEle">
             <img className="footerIcon" src="/icons/footer-logo 1.png" alt="" />
             <span>Welcome to our Trip and Tour Agency. Lorem simply text amet cing elit.</span>
-            <Divider></Divider>
+            <Divider sx={{ bgcolor: "#A9A8B6" }} />
             
           </Stack>
           <Stack className="firstBlockSecondEle">
@@ -63,6 +64,10 @@ export default function Footer() {
           </Stack>
           
         </Stack>
+        </Stack>
+        
+        <Divider className="footerSecondDevider" sx={{ bgcolor: "#A9A8B6" }} />
+        <p className="copyright">@ All Copyright 2024, Tevily</p>
       </Container>
     </div>
   )
