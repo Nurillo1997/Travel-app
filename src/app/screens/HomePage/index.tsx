@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../../../css/homePage.css';
+import '../../../css/agenciesPage.css';
 //Import Components
 import TopAgencies from "./topAgencies";
 import RecommendedDestinations from "./recommendedDestinations";
